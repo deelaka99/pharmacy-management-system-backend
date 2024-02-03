@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "aecb9a14-24c5-4920-867c-465cb67699cc",
+		"name": "pharmacy-management-system-backend-API-Collection",
+		"description": "By PDW Kariyawasam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32149429"
+	},
+	"item": [
+		{
+			"name": "owner login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"deelaka\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding new user to database by the owner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner token every time when you're going to add a user",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dilru\",\r\n    \"password\": \"123\",\r\n    \"role\":\"cashier\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view customer details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner, manager, cashier token every time when you're going to view customer list",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/customer/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a new customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner token every time when you're going to add a customer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Malki\",\r\n    \"age\": \"23\",\r\n    \"address\": \"Madampe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customer/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating an existing customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner, manager or chashier token every time when you're going to update a customer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Malki99\",\r\n    \"age\": \"29\",\r\n    \"address\": \"Madampe North\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customer/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft deleting a customer",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner or manager token every time when you're going to soft delete a customer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customer/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "permenatly deleting a customer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner token every time when you're going to delete a customer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/customer/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view medication details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner, manager, cashier token every time when you're going to view medification list",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/medication/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medication",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a new medication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner token every time when you're going to add a medification",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"medi23\",\r\n    \"quantity\": \"423\",\r\n    \"description\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/medication/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medication",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating an existing medication",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner, manager token every time when you're going to updating a medification",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"medi\",\r\n    \"quantity\": \"423\",\r\n    \"description\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/medication/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medication",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft deleting a medication",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner or manager token every time when you're going to soft deleting a medification",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"medi\",\r\n    \"quantity\": \"423\",\r\n    \"description\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/medication/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medication",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Permanantly deleting a medication",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiZGVlbGFrYSIsInJvbGUiOiJvd25lciIsImlhdCI6MTcwNjk1OTk5MSwiZXhwIjoxNzA2OTYzNTkxfQ.wP9zbOpWo7kWFK0CAjAn7aBYqgVCqVZ-i2jAXLt0re4",
+						"description": "In here, you have to add the owner token every time when you're going to delete a medification permanantly",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"medi\",\r\n    \"quantity\": \"423\",\r\n    \"description\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/medication/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medication",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
