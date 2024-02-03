@@ -54,4 +54,4 @@ node index.js
 The server will start running at http://localhost:3000 by default.
 
 ### Usage
-You can use tools like Postman to interact with the API endpoints. Import the provided Postman collection to get started with testing the endpoints.
+You can use tools like Postman to interact with the API endpoints. Import the provided Postman collection in assets folder to get started with testing the endpoints.
