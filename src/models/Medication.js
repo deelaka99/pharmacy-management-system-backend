@@ -1,8 +1,8 @@
 class Medication {
-    constructor(name, amount, expiredate) {
+    constructor(name, quantity, description) {
       this.name = name;
-      this.amount = amount;
-      this.expiredate = expiredate;
+      this.quantity = quantity;
+      this.description = description;
     }
   }
   
