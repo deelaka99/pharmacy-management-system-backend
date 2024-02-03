@@ -59,6 +59,13 @@ const authController = {
     try {
       const { username, password, role } = req.body;
 
+      // Check if the user is the owner
+      if (req.user.role !== "owner") {
+        return res
+          .status(403)
+          .json({ message: "Only the owner can register new users" });
+      }
+
       // Hash password
       const hashedPassword = bcrypt.hashSync(password, 10);
 
