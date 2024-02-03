@@ -16,13 +16,13 @@ To run this project locally, follow these steps:
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/pharmacy-management-api.git
+    git clone https://github.com/deelaka99/pharmacy-management-system-backend
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd pharmacy-management-api
+    cd pharmacy-management-system-backend
     ```
 
 3. Install dependencies:
